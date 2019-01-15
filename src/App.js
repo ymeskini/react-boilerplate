@@ -1,35 +1,33 @@
 import React, { Component } from "react";
+import { hot } from "react-hot-loader";
 
 class App extends Component {
   state = {
     counter: 0
   };
+
+  increment = () => {
+    this.setState(state => ({
+      counter: state.counter + 1
+    }));
+  };
+
+  decrement = () => {
+    this.setState(state => ({
+      counter: state.counter - 1
+    }));
+  };
   render() {
+    const { counter } = this.state;
     return (
       <div>
         <h1>Hello World</h1>
-        <h2>Count: {this.state.counter}</h2>
-        <button
-          onClick={() =>
-            this.setState(state => ({
-              counter: state.counter + 1
-            }))
-          }
-        >
-          +
-        </button>
-        <button
-          onClick={() =>
-            this.setState(state => ({
-              counter: state.counter - 1
-            }))
-          }
-        >
-          -
-        </button>
+        <h2>Counter {counter}</h2>
+        <button onClick={this.increment}>+</button>
+        <button onClick={this.decrement}>-</button>
       </div>
     );
   }
 }
 
-export default App;
+export default hot(module)(App);
