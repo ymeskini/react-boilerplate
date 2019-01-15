@@ -1,3 +1,7 @@
 import React from 'react';
 
-export default () => <div>Warning</div>;
+const Warning = () => <div>Warning</div>;
+
+Warning.displayName = 'Warning';
+
+export default Warning;
