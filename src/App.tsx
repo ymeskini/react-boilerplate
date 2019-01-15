@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
-import { hot } from 'react-hot-loader';
+import * as React from 'react';
+import { hot } from 'react-hot-loader/root';
 
 const Warning = React.lazy(() => import('./Warning'));
 
-class App extends Component {
+interface IState {
+  count: number;
+}
+
+class App extends React.Component<{}, IState> {
   state = {
     count: 0
   };
@@ -38,4 +42,4 @@ class App extends Component {
   }
 }
 
-export default hot(module)(App);
+export default hot(App);
