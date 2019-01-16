@@ -1,0 +1,29 @@
+{
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["**/*.js", "**/*.jsx"]
+  },
+  "rules": {
+    "max-line-length": {
+      "options": [80]
+    },
+    "interface-name": false,
+    "new-parens": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
+    "prefer-object-spread": true,
+    "no-empty-interface": true,
+    "curly": true,
+    "trailing-comma": false,
+    "member-ordering": false,
+    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
+    "ordered-imports": false,
+    "no-empty": false,
+    "max-classes-per-file": false,
+    "no-var-requires": false,
+    "interface-over-type-literal": false,
+    "object-literal-sort-keys": false
+  }
+}

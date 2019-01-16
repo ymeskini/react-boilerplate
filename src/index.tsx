@@ -1,15 +1,15 @@
-import React, { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import '@babel/polyfill';
 import App from './App';
 import './styles.css';
 import DefaultErrorBoundary from './DefaultErrorBoundary';
 
 ReactDOM.render(
-  <StrictMode>
+  <React.StrictMode>
     <DefaultErrorBoundary>
       <App />
     </DefaultErrorBoundary>
-  </StrictMode>,
+  </React.StrictMode>,
   document.getElementById('app')
 );

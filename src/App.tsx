@@ -8,23 +8,23 @@ interface IState {
 }
 
 class App extends React.Component<{}, IState> {
-  state = {
+  public state = {
     count: 0
   };
 
-  increment = () => {
+  private increment = () => {
     this.setState(state => ({
       count: state.count + 1
     }));
   };
 
-  decrement = () => {
+  private decrement = () => {
     this.setState(state => ({
       count: state.count - 1
     }));
   };
 
-  render() {
+  public render() {
     const { count } = this.state;
     return (
       <div>

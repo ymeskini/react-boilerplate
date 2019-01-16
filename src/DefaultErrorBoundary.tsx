@@ -1,20 +1,15 @@
-import React from 'react';
-import propTypes from 'prop-types';
+import * as React from 'react';
 
 export default class DefaultErrorBoundary extends React.Component {
-  state = {
+  public state = {
     isError: false
   };
 
-  static getDerivedStateFromError() {
+  public static getDerivedStateFromError() {
     return { isError: true };
   }
 
-  static propTypes = {
-    children: propTypes.node.isRequired
-  };
-
-  render() {
+  public render() {
     const { isError } = this.state;
     const { children } = this.props;
     return isError ? <div>Something went wrong!</div> : children;
