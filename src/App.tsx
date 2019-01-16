@@ -1,43 +1,19 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader/root';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-const Warning = React.lazy(() => import('./Warning'));
+import Counter from './Counter';
+import reducers from './reducers';
 
-interface IState {
-  count: number;
-}
+const store = createStore(reducers);
 
-class App extends React.Component<{}, IState> {
-  public state = {
-    count: 0
-  };
-
-  private increment = () => {
-    this.setState(state => ({
-      count: state.count + 1
-    }));
-  };
-
-  private decrement = () => {
-    this.setState(state => ({
-      count: state.count - 1
-    }));
-  };
-
+class App extends React.Component {
   public render() {
-    const { count } = this.state;
     return (
-      <div>
-        <h1>Hello World</h1>
-        <h2>Count: {count}</h2>
-        {count > 10 ? (
-          <React.Suspense fallback={null}>
-            <Warning />
-          </React.Suspense>
-        ) : null}
-        <button onClick={this.increment}>+</button>
-        <button onClick={this.decrement}>-</button>
-      </div>
+      <Provider store={store}>
+        <Counter />
+      </Provider>
     );
   }
 }
