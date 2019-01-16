@@ -21,5 +21,6 @@
   },
   "exclude": ["node_modules"],
   "types": ["typePatches"],
-  "include": ["./src/"]
+  "include": ["./src/"],
+  "defaultSeverity": "warning"
 }
