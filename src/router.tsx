@@ -8,14 +8,21 @@ const Home = () => (
   </div>
 );
 
-function Loading({ pastDelay }) {
-  return pastDelay ? <h3>Loading...</h3> : null;
+function Loading({ error, retry }) {
+  if (error) {
+    return (
+      <div>
+        Error! <button onClick={retry}>Retry</button>
+      </div>
+    );
+  } else {
+    return <h3>Loading...</h3>;
+  }
 }
 
 const Counter = Loadable({
   loader: () => import('./Counter'),
-  loading: Loading,
-  delay: 60
+  loading: Loading
 });
 
 export const AppRouter: React.StatelessComponent<{}> = () => {
