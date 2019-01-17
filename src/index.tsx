@@ -6,10 +6,8 @@ import './styles.css';
 import DefaultErrorBoundary from './DefaultErrorBoundary';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <DefaultErrorBoundary>
-      <App />
-    </DefaultErrorBoundary>
-  </React.StrictMode>,
+  <DefaultErrorBoundary>
+    <App />
+  </DefaultErrorBoundary>,
   document.getElementById('app')
 );

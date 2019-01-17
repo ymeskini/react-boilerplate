@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 import { IReduxState } from './reducers';
 import { Dispatch } from 'redux';
 import { increment, decrement } from './actions/counter';
@@ -17,7 +19,7 @@ class Counter extends React.Component<IProps, {}> {
     const { onIncrement, onDecrement, counter } = this.props;
     return (
       <div>
-        <h1>Hello World</h1>
+        <Link to="/">Home</Link>
         <h2>Count: {counter}</h2>
         {counter > 10 ? (
           <React.Suspense fallback={null}>

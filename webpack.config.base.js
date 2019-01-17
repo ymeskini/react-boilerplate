@@ -36,5 +36,10 @@ module.exports = {
     new ForkTsCheckerWebpackPlugin({
       tslint: true
     })
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 };
