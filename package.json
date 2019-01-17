@@ -25,7 +25,7 @@
     "url": "https://github.com/ymeskini/react-boilerplate/issues"
   },
   "engines": {
-    "node": "10.14.2",
+    "node": "10.15.0",
     "npm": "6.4.1"
   },
   "homepage": "https://github.com/ymeskini/react-boilerplate#readme",
