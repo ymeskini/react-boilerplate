@@ -9,7 +9,8 @@
     "dev:hot": "npm run dev -- --hot",
     "test": "jest",
     "format": "pretty-quick",
-    "lint": "tslint --project ./"
+    "lint": "tslint --project ./",
+    "storybook": "start-storybook -p 6006 -c .storybook"
   },
   "husky": {
     "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
@@ -36,6 +37,7 @@
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/preset-env": "7.2.3",
     "@babel/preset-react": "7.0.0",
+    "@storybook/react": "^4.1.7",
     "@types/jest": "23.3.12",
     "@types/react": "16.7.20",
     "@types/react-dom": "16.0.11",
