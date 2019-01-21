@@ -30,7 +30,7 @@ const ContextAPI = Loadable({
   loading: Loading
 });
 
-export const AppRouter: React.StatelessComponent<{}> = () => {
+const AppRouter: React.StatelessComponent<{}> = () => {
   return (
     <BrowserRouter>
       <Switch>
@@ -41,3 +41,5 @@ export const AppRouter: React.StatelessComponent<{}> = () => {
     </BrowserRouter>
   );
 };
+
+export default AppRouter;

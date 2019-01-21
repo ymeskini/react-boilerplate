@@ -1,8 +1,21 @@
 import React from 'react';
-import Header from './Header';
-import MessageList from './MessageList';
-import MessageViewer from './MessageViewer';
 import { EmailConsumer } from './EmailContext';
+import Loadable from 'react-loadable';
+
+const MessageList = Loadable({
+  loader: () => import('./MessageList'),
+  loading: () => <div>loading...</div>
+});
+
+const MessageViewer = Loadable({
+  loader: () => import('./MessageViewer'),
+  loading: () => <div>loading...</div>
+});
+
+const Header = Loadable({
+  loader: () => import('./Header'),
+  loading: () => <div>loading...</div>
+});
 
 const MainPage = () => (
   <EmailConsumer>

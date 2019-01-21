@@ -1,9 +1,18 @@
 import React from 'react';
-import LoginPage from './LoginPage';
-import MainPage from './MainPage';
 import { UserProvider, UserConsumer } from './UserContext';
 import { EmailProvider } from './EmailContext';
 import { NotificationProvider } from './NotificationContext';
+import Loadable from 'react-loadable';
+
+const LoginPage = Loadable({
+  loader: () => import('./LoginPage'),
+  loading: () => <div>loading...</div>
+});
+
+const MainPage = Loadable({
+  loader: () => import('./MainPage'),
+  loading: () => <div>loading...</div>
+});
 
 function Root() {
   return (

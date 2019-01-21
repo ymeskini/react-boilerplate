@@ -1,6 +1,11 @@
 import React from 'react';
-import UserMenu from './UserMenu';
 import { EmailConsumer } from './EmailContext';
+import Loadable from 'react-loadable';
+
+const UserMenu = Loadable({
+  loader: () => import('./UserMenu'),
+  loading: () => <div>loading...</div>
+});
 
 const Header = () => (
   <EmailConsumer>

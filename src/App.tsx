@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader/root';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
-import { AppRouter } from './router';
+import AppRouter from './router';
 
 const store = createStore(reducers);
 
