@@ -1,4 +1,5 @@
 const merge = require('webpack-merge');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const baseConfig = require('./webpack.config.base');
 
 module.exports = merge(baseConfig, {
@@ -7,5 +8,10 @@ module.exports = merge(baseConfig, {
     port: 9000,
     historyApiFallback: true
   },
-  devtool: 'source-map'
+  devtool: 'inline-source-map',
+  plugins: [
+    new ForkTsCheckerWebpackPlugin({
+      tslint: true
+    })
+  ]
 });

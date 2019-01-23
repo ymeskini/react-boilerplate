@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -42,9 +41,6 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html'
-    }),
-    new ForkTsCheckerWebpackPlugin({
-      tslint: true
     })
   ]
 };

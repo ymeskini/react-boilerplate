@@ -19,7 +19,7 @@
     "baseUrl": ".",
     "lib": ["es2017", "dom"]
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "dist"],
   "types": ["typePatches"],
   "include": ["./src/"],
   "defaultSeverity": "warning"
