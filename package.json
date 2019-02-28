@@ -30,7 +30,7 @@
     "url": "https://github.com/ymeskini/react-boilerplate/issues"
   },
   "engines": {
-    "node": "10.15.0",
+    "node": "10.15.2",
     "npm": "6.8.0"
   },
   "homepage": "https://github.com/ymeskini/react-boilerplate#readme",
@@ -45,8 +45,8 @@
     "@storybook/addon-knobs": "4.1.13",
     "@storybook/addons": "4.1.13",
     "@storybook/react": "4.1.13",
+    "@types/react": "16.8.5",
     "@types/jest": "24.0.9",
-    "@types/react": "16.7.22",
     "@types/react-dom": "16.8.2",
     "@types/react-redux": "7.0.1",
     "@types/react-router-dom": "4.3.1",
@@ -72,8 +72,8 @@
     "storybook-addon-jsx": "6.0.0",
     "ts-jest": "23.10.5",
     "ts-loader": "5.3.3",
+    "tslint-config-prettier": "1.18.0",
     "tslint": "5.13.0",
-    "tslint-config-prettier": "1.17.0",
     "tslint-react": "3.6.0",
     "typescript": "3.3.3333",
     "webpack": "4.29.6",
@@ -85,7 +85,7 @@
   "dependencies": {
     "@babel/polyfill": "7.2.5",
     "axios": "^0.18.0",
-    "immer": "1.12.1",
+    "immer": "2.0.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-loadable": "5.5.0",
