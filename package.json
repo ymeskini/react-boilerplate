@@ -48,7 +48,7 @@
     "fork-ts-checker-webpack-plugin": "1.4.0",
     "html-webpack-plugin": "3.2.0",
     "jest": "24.8.0",
-    "jest-dom": "3.1.2",
+    "jest-dom": "4.0.0",
     "json-server": "0.14.2",
     "mini-css-extract-plugin": "0.5.0",
     "prettier": "1.16.4",
