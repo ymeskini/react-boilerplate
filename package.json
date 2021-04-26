@@ -19,7 +19,7 @@
   "author": "Youssef Meskini",
   "license": "ISC",
   "engines": {
-    "node": "10.15.2",
+    "node": "10.24.1",
     "npm": "6.8.0"
   },
   "devDependencies": {
